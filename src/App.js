@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Form from './components/Form'
+import FormItem from './components/FormItem';
+
+const arr =[
+  {
+    name: 'sadyr',
+    age:22
+  },
+  
+]
 
 function App() {
+
+  const [state, setState] = useState(arr)
+
+  function saveObject(obj){
+    console.log(obj);
+     setState((prev)=> [...prev, obj])
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {console.log(state)}
+   <Form onSaveObject={saveObject}/>
+   {state.map((el)=>(
+     <FormItem key={el.id} name={el.enteredUsername} email={el.enteredEmail} pass={el.enteredPassword} />
+   ))}
+   
     </div>
   );
 }

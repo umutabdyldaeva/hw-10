@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(209, 234, 235);
+    box-shadow: 0.5px 0.5px rgb(212, 209, 209);
+}
+
+input{
+    width: 300px;
+    height: 30px;
+    margin-left: 45px;
+}
+
+label{
+    margin-left: 45px;
+}
+
+button{
+    width: 310px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 45px;
+    background-color: rgb(100, 100, 243);
+}
+
+h1{
+    text-align: center;
+    color: blue;
+}
