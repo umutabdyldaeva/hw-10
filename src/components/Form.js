@@ -9,13 +9,14 @@ const [enteredPassword, setEnteredPassword] = useState('');
 
 const addUserChangeHandler = (event) => {
     event.preventDefault();
-    const obj = {
-        enteredUsername,
-        enteredEmail,
-        enteredPassword,
-        id: Math.random().toString(),
-        
-    }
+
+const obj = {
+    enteredUsername,
+    enteredEmail,
+    enteredPassword,
+    id: Math.random().toString(),
+
+}
     
     props.onSaveObject(obj)
 }
